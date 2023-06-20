@@ -1,2 +1,2 @@
-# DataSphere
-Startup untuk pengumpulan dan pengolahan data yang digunakan untuk mengembangkan produk IT yang efektif dan efisien.
+# CountMatrix
+Aplikasi untuk menjalankan program Perhitungan Matriks sederhana, dengan bisa memilih operasi dan menginput elemennya secara fleksibel
