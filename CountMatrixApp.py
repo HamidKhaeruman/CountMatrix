@@ -24,19 +24,36 @@ def input_matrix(rows, cols):
 # (Hamid) >> Fungsi untuk menjalankan perhitungan sesuai opsi yang dipilih, di dalamnya juga menerapkan perulangan for
 def perform_operation(matrix_A, matrix_B, operation):
     result = []
-    for i in range(len(matrix_A)):
-        row = []
-        for j in range(len(matrix_A[0])):
-            if operation == 1:  # Penjumlahan
-                element = matrix_A[i][j] + matrix_B[i][j]
-            elif operation == 2:  # Pengurangan
-                element = matrix_A[i][j] - matrix_B[i][j]
-            elif operation == 3:  # Perkalian
-                element = sum(matrix_A[i][k] * matrix_B[k][j] for k in range(len(matrix_B)))
-            else:  # Perkalian dengan skalar
-                element = matrix_A[i][j] * matrix_B
-            row.append(element)
-        result.append(row)
+    if operation == 4:  # Perkalian dengan skalar
+        scalar = float(input("Masukkan skalar: "))
+        matrix_choice = int(input("Pilih matriks yang akan dikalikan (1 untuk matriks A, 2 untuk matriks B): "))
+        if matrix_choice == 1:
+            matrix = matrix_A
+        elif matrix_choice == 2:
+            matrix = matrix_B
+        else:
+            print("Pilihan matriks tidak valid.")
+            return result
+
+        # Eksekusi Fungsi Perkalian Skalar
+        for i in range(len(matrix)):
+            row = []
+            for j in range(len(matrix[0])):
+                element = matrix[i][j] * scalar
+                row.append(element)
+            result.append(row)
+    else:
+        for i in range(len(matrix_A)):
+            row = []
+            for j in range(len(matrix_A[0])):
+                if operation == 1:  # Penjumlahan
+                    element = matrix_A[i][j] + matrix_B[i][j]
+                elif operation == 2:  # Pengurangan
+                    element = matrix_A[i][j] - matrix_B[i][j]
+                elif operation == 3:  # Perkalian
+                    element = sum(matrix_A[i][k] * matrix_B[k][j] for k in range(len(matrix_B)))
+                row.append(element)
+            result.append(row)
     return result
 
 # (Prabu) >> Fungsi untuk mencetak baris dan kolom matriksnya  
