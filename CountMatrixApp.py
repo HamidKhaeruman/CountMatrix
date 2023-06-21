@@ -64,3 +64,34 @@ print("2. Pengurangan matriks")
 print("3. Perkalian matriks")
 print("4. Perkalian matriks dengan skalar")
 choice = int(input("Masukkan pilihan operasi (1/2/3/4): "))
+
+
+#(Rafli) Penentuan Kondisi Pemilihan Operasi dan Penentuan Opsi Pengurutan Elemen Matriks
+# Proses operasi sesuai pilihan
+if 1 <= choice <= 4:
+    result = perform_operation(matrix_A, matrix_B, choice)
+    if choice == 1:
+        print("Hasil penjumlahan matriks:")
+    elif choice == 2:
+        print("Hasil pengurangan matriks:")
+    elif choice == 3:
+        print("Hasil perkalian matriks:")
+    else:
+        print("Hasil perkalian matriks dengan skalar:")
+    print_matrix(result)
+
+    # Pengurutan elemen matriks
+    print("\nElemen matriks setelah diurutkan:")
+    print("1. Secara ascending")
+    print("2. Secara descending")
+    sort_choice = int(input("Masukkan pilihan pengurutan (1/2): "))
+    if sort_choice == 1:
+        sorted_result = sort_matrix(result, ascending=True)
+        print_matrix(sorted_result)
+    elif sort_choice == 2:
+        sorted_result = sort_matrix(result, ascending=False)
+        print_matrix(sorted_result)
+    else:
+        print("Pilihan pengurutan tidak valid.")
+else:
+    print("Pilihan operasi tidak valid.")
