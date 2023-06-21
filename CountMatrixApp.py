@@ -11,6 +11,7 @@ def sort_matrix(matrix, ascending=True):
             index += 1
         sorted_matrix.append(row)
     return sorted_matrix
+
 # (Hamid) >> Fungsi untuk menjalankan perhitungan sesuai opsi yang dipilih, di dalamnya juga menerapkan perulangan for
 def perform_operation(matrix_A, matrix_B, operation):
     result = []
@@ -29,8 +30,7 @@ def perform_operation(matrix_A, matrix_B, operation):
         result.append(row)
     return result
 
-
-# (maulidya) >> input matriks
+# (Maulidya) >> User Menginput kriteria Matriks yang Akan Dibuat
 # Input ukuran matriks
 rows = int(input("Masukkan jumlah baris matriks: "))
 cols = int(input("Masukkan jumlah kolom matriks: "))
