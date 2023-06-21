@@ -25,11 +25,11 @@ def input_matrix(rows, cols):
 def perform_operation(matrix_A, matrix_B, operation):
     result = []
     if operation == 4:  # Perkalian dengan skalar
-        scalar = float(input("Masukkan skalar: "))
-        matrix_choice = int(input("Pilih matriks yang akan dikalikan (1 untuk matriks A, 2 untuk matriks B): "))
-        if matrix_choice == 1:
+        matrix_choice = input("Pilih matriks yang akan dikalikan (A untuk matriks A, B untuk matriks B): ")
+        scalar = float(input(f"Masukkan skalar untuk matriks {matrix_choice}: "))
+        if matrix_choice == 'A':
             matrix = matrix_A
-        elif matrix_choice == 2:
+        elif matrix_choice == 'B':
             matrix = matrix_B
         else:
             print("Pilihan matriks tidak valid.")
