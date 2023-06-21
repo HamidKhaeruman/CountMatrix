@@ -28,3 +28,26 @@ def perform_operation(matrix_A, matrix_B, operation):
             row.append(element)
         result.append(row)
     return result
+    def print_matrix(matrix):
+    for row in matrix:
+        print(*row)
+
+# Input ukuran matriks
+rows = int(input("Masukkan jumlah baris matriks: "))
+cols = int(input("Masukkan jumlah kolom matriks: "))
+
+# Input matriks A
+print("Masukkan matriks A:")
+matrix_A = input_matrix(rows, cols)
+
+# Input matriks B
+print("Masukkan matriks B:")
+matrix_B = input_matrix(rows, cols)
+
+# Pilihan operasi
+print("Pilihan operasi:")
+print("1. Penjumlahan matriks")
+print("2. Pengurangan matriks")
+print("3. Perkalian matriks")
+print("4. Perkalian matriks dengan skalar")
+choice = int(input("Masukkan pilihan operasi (1/2/3/4): "))
