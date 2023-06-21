@@ -11,7 +11,7 @@ def sort_matrix(matrix, ascending=True):
             index += 1
         sorted_matrix.append(row)
     return sorted_matrix
-# (Prabu) >> Fungsi untuk menentukan panjang baris dan kolom matriks, setelah itu membuat fungsi untuk mencetak matriksnya
+# (Prabu) >> Fungsi untuk menentukan panjang baris dan kolom matriks
 def input_matrix(rows, cols):
     matrix = []
     print("Masukkan elemen matriks:")
@@ -36,7 +36,10 @@ def perform_operation(matrix_A, matrix_B, operation):
             row.append(element)
         result.append(row)
     return result
-
+# (Prabu) >> Fungsi untuk mencetak baris dan kolom matriksnya  
+def print_matrix(matrix):
+    for row in matrix:
+        print(*row)
 # (Maulidya) >> User Menginput kriteria Matriks yang Akan Dibuat
 # Input ukuran matriks
 rows = int(input("Masukkan jumlah baris matriks: "))
