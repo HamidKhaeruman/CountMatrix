@@ -28,10 +28,9 @@ def perform_operation(matrix_A, matrix_B, operation):
             row.append(element)
         result.append(row)
     return result
-    def print_matrix(matrix):
-    for row in matrix:
-        print(*row)
 
+
+# (maulidya) >> input matriks
 # Input ukuran matriks
 rows = int(input("Masukkan jumlah baris matriks: "))
 cols = int(input("Masukkan jumlah kolom matriks: "))
