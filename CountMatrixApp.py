@@ -101,13 +101,19 @@ if 1 <= choice <= 4:
     print("\nElemen matriks setelah diurutkan:")
     print("1. Secara ascending")
     print("2. Secara descending")
-    sort_choice = int(input("Masukkan pilihan pengurutan (1/2): "))
+    print("3. Transpose matriks")
+    sort_choice = int(input("Masukkan pilihan pengurutan (1/2/3): "))
+    
     if sort_choice == 1:
         sorted_result = sort_matrix(result, ascending=True)
         print_matrix(sorted_result)
     elif sort_choice == 2:
         sorted_result = sort_matrix(result, ascending=False)
         print_matrix(sorted_result)
+    elif sort_choice == 3:
+        transposed_result = [[result[j][i] for j in range(len(result))] for i in range(len(result[0]))]
+        print("Hasil transpose matriks:")
+        print_matrix(transposed_result)
     else:
         print("Pilihan pengurutan tidak valid.")
 else:
